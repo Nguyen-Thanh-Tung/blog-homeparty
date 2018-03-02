@@ -1,7 +1,6 @@
 .container{
     width: 330px;
     height: 480px;
-
 }
 
 .topic {
@@ -19,17 +18,15 @@
     color: #333333;
     margin-left: 13px;
     padding-left: 13px;
-    border-left: 4px solid #ff0000;
-
+    border-left: 4px solid #ff8a02;
+    margin-bottom: 7px;
 }
 
 .component {
     width: 330px;
     height: 48px;
     border-bottom: 1px solid #edecf2;
-    margin-left: 31px;
     vertical-align: center;
-    te
 }
 
 .list {
@@ -49,11 +46,12 @@
 }
 .a{
     color: #333333;
+    margin-bottom: 10px;
 }
-
-.span {
-    color: red;
-    padding-right: 10px;
-    font-size: 20px;
-
+img{
+    border: 0;
+    width: 4px;
+    height: 4px;
+    margin-right: 10px;
+    margin-bottom: 4px;
 }
