@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>List Like None</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/home/manh/Documents/code/blog-homeparty/Account/js/control.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/control.css">
+    <script src="../js/edit.js"></script>
+</head>
+<body>
+<div class="main-container col2-left-layout">
+    <div class="main">
+        <div class="main-content">
+            <div class="col-left sidebar col-left-first">
+                <div class="block block-account">
+                    <div class="block-title">
+                        <strong>
+                            <a href="https://vuabia.com/customer/account/">
+                                <span>Tài khoản</span>
+                            </a>
+                        </strong>
+                    </div>
+                    <div class="block-content">
+                        <ul>
+                            <li><a href="https://vuabia.com/customer/account/edit/">Thông tin tài khoản</a></li>
+                            <li><a href="https://vuabia.com/customer/address/">Danh bạ địa chỉ</a></li>
+                            <li><a href="https://vuabia.com/sales/order/history/">Đơn hàng của tôi</a></li>
+                            <li class="current last"><a href="https://vuabia.com/wishlist/"><strong>Danh sách
+                                thích</strong></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-main">
+                <div id="map-popup" class="map-popup" style="display:none;">
+                    <a href="#" class="map-popup-close" id="map-popup-close">×</a>
+                    <div class="map-popup-heading"><h3 id="map-popup-heading"></h3></div>
+                    <div class="map-popup-content" id="map-popup-content">
+                        <div class="map-popup-msrp" id="map-popup-msrp-box">
+                            <span class="label">Giá:</span>
+                            <span style="text-decoration:line-through;" id="map-popup-msrp"></span>
+                        </div>
+                        <div class="map-popup-price" id="map-popup-price-box">
+                            <span class="label">Giá thực tế:</span>
+                            <span id="map-popup-price"></span>
+                        </div>
+                        <div class="map-popup-checkout">
+                            <form action="" method="POST" id="product_addtocart_form_from_popup">
+                                <input type="hidden" name="product" class="product_id" value=""
+                                       id="map-popup-product-id">
+                                <div class="additional-addtocart-box">
+                                </div>
+                                <button type="button" title="Cho vào giỏ hàng" class="button btn-cart"
+                                        id="map-popup-button"><span><span>Cho vào giỏ hàng</span></span></button>
+                            </form>
+                        </div>
+                        <script type="text/javascript">
+                            //<![CDATA[
+                            document.observe("dom:loaded", Catalog.Map.bindProductForm);
+                            //]]>
+                        </script>
+                    </div>
+                    <div class="map-popup-text" id="map-popup-text">Our price is lower than the manufacturer's "minimum
+                        advertised price." As a result, we cannot show you the price in catalog or the product page.
+                        <br><br> You have no obligation to purchase the product once you know the price. You can simply
+                        remove the item from your cart.
+                    </div>
+                    <div class="map-popup-text" id="map-popup-text-what-this">Our price is lower than the manufacturer's
+                        "minimum advertised price." As a result, we cannot show you the price in catalog or the product
+                        page. <br><br> You have no obligation to purchase the product once you know the price. You can
+                        simply remove the item from your cart.
+                    </div>
+                </div>
+                <div class="my-account">
+                    <div class="my-wishlist">
+                        <div class="page-title title-buttons">
+                            <h1>Danh sách thích</h1>
+                        </div>
+
+                        <div class="fieldset">
+                            <p class="wishlist-empty">Bạn chưa thích sản phẩm nào.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-left sidebar">
+                <div class="block block-reorder">
+                    <div class="block-title">
+                        <strong><span>Đơn hàng của tôi</span></strong>
+                    </div>
+                    <form method="post" action="https://vuabia.com/checkout/cart/addgroup/"
+                          id="reorder-validate-detail">
+                        <input name="form_key" type="hidden" value="1UANXoeYVOJBO2PU">
+                        <div class="block-content">
+                            <p class="block-subtitle">Sản phẩm cuối được đặt hàng</p>
+                            <ol id="cart-sidebar-reorder">
+                                <li class="item last odd">
+                                    <input type="checkbox" name="order_items[]" id="reorder-item-12557" value="12557"
+                                           title="Chọn mua" class="checkbox validate-one-required-by-name">
+                                    <script type="text/javascript">
+                                        //<![CDATA[
+                                        $('reorder-item-12557').advaiceContainer = 'cart-sidebar-reorder-advice-container';
+                                        //]]>
+                                    </script>
+                                    <p class="product-name"><a href="https://vuabia.com/beckice330-tang-ly.html">Beck's
+                                        Ice lon cao 330ml - Thùng 24 TẶNG LY chính hãng</a></p>
+                                </li>
+                            </ol>
+                            <script type="text/javascript">decorateList('cart-sidebar-reorder')</script>
+                            <div id="cart-sidebar-reorder-advice-container"></div>
+                            <div class="actions">
+                                <button type="submit" title="Chọn mua" class="button btn-cart">
+                                    <span><span>Chọn mua</span></span></button>
+                                <a href="https://vuabia.com/customer/account/">Xem hết</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <script type="text/javascript">
+                    //<![CDATA[
+                    var reorderFormDetail = new VarienForm('reorder-validate-detail');
+                    //]]>
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

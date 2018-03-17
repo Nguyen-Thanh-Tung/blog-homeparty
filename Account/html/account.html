@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Account</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/home/manh/Documents/code/blog-homeparty/Account/js/account.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/control.css">
+    <script src="../js/edit.js"></script>
+</head>
+<body>
+<div class="main-container col2-left-layout">
+    <div class="main">
+        <div class="main-content">
+            <div class="col-left sidebar col-left-first">
+                <div class="block block-account">
+                    <div class="block-title">
+                        <strong>
+                            <a href="https://vuabia.com/customer/account/">
+                                <span>Tài khoản</span>
+                            </a>
+                        </strong>
+                    </div>
+                    <div class="block-content">
+                        <ul>
+                            <li><a href="https://vuabia.com/customer/account/edit/">Thông tin tài khoản</a></li>
+                            <li><a href="https://vuabia.com/customer/address/">Danh bạ địa chỉ</a></li>
+                            <li><a href="https://vuabia.com/sales/order/history/">Đơn hàng của tôi</a></li>
+                            <li class="last"><a href="https://vuabia.com/wishlist/">Danh sách thích</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-main">
+                <ul class="messages">
+                    <li class="success-msg">
+                        <ul>
+                            <li><span>Đăng nhập Facebook thành công.</span></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div id="map-popup" class="map-popup" style="display:none;">
+                    <a href="#" class="map-popup-close" id="map-popup-close">×</a>
+                    <div class="map-popup-heading"><h3 id="map-popup-heading"></h3></div>
+                    <div class="map-popup-content" id="map-popup-content">
+                        <div class="map-popup-msrp" id="map-popup-msrp-box">
+                            <span class="label">Giá:</span>
+                            <span style="text-decoration:line-through;" id="map-popup-msrp"></span>
+                        </div>
+                        <div class="map-popup-price" id="map-popup-price-box">
+                            <span class="label">Giá thực tế:</span>
+                            <span id="map-popup-price"></span>
+                        </div>
+                        <div class="map-popup-checkout">
+                            <form action="" method="POST" id="product_addtocart_form_from_popup">
+                                <input type="hidden" name="product" class="product_id" value=""
+                                       id="map-popup-product-id">
+                                <div class="additional-addtocart-box">
+                                </div>
+                                <button type="button" title="Cho vào giỏ hàng" class="button btn-cart"
+                                        id="map-popup-button"><span><span>Cho vào giỏ hàng</span></span></button>
+                            </form>
+                        </div>
+                        <!--<script type="text/javascript">-->
+                            <!--//<![CDATA[-->
+                            <!--document.observe("dom:loaded", Catalog.Map.bindProductForm);-->
+                            <!--//]]>-->
+                        <!--</script>-->
+                    </div>
+                    <div class="map-popup-text" id="map-popup-text">Our price is lower than the manufacturer's "minimum
+                        advertised price." As a result, we cannot show you the price in catalog or the product page.
+                        <br><br> You have no obligation to purchase the product once you know the price. You can simply
+                        remove the item from your cart.
+                    </div>
+                    <div class="map-popup-text" id="map-popup-text-what-this">Our price is lower than the manufacturer's
+                        "minimum advertised price." As a result, we cannot show you the price in catalog or the product
+                        page. <br><br> You have no obligation to purchase the product once you know the price. You can
+                        simply remove the item from your cart.
+                    </div>
+                </div>
+                <div class="my-account">
+                    <div class="dashboard">
+                        <div class="page-title">
+                            <h1>Bảng điều khiển</h1>
+                        </div>
+                        <div class="welcome-msg">
+                            <p class="hello"><strong>Xin chào, !</strong></p>
+                            <p>Từ bảng điều khiển, bạn có thể xem nhanh nhật ký hoạt động và cập nhật thông tin tài
+                                khoản. Hãy chọn liên kết bên dưới để xem hoặc chỉnh sửa thông tin.</p>
+                        </div>
+                        <div class="box-account box-info">
+                            <div class="box-head">
+                                <h2>Thông tin tài khoản</h2>
+                            </div>
+                            <div class="col2-set">
+                                <div class="col-1">
+                                    <div class="box">
+                                        <div class="box-title">
+                                            <h3>Thông tin liên hệ</h3>
+                                            <a href="https://vuabia.com/customer/account/edit/">Chỉnh sửa</a>
+                                        </div>
+                                        <div class="box-content">
+                                            <p>
+                                                <br>
+                                                <br>
+                                                <a href="https://vuabia.com/customer/account/edit/changepass/1/">Thay
+                                                    đổi mật khẩu</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="box">
+                                        <div class="box-title">
+                                            <h3>Bản tin</h3>
+                                            <a href="https://vuabia.com/newsletter/manage/">Chỉnh sửa</a>
+                                        </div>
+                                        <div class="box-content">
+                                            <p>
+                                                Bạn hiện đang không đăng ký theo dõi bản tin nào của chúng tôi. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-account box-info">
+                            <div class="box-head">
+                                <h2>Danh bạ địa chỉ</h2>
+                                <a href="https://vuabia.com/customer/address/">Quản lý địa chỉ</a>
+                            </div>
+                            <div class="col2-set">
+                                <div class="col-1">
+                                    <div class="box">
+                                        <div class="box-title">
+                                            <h3>Địa chỉ thanh toán mặc định</h3>
+                                            <a href="https://vuabia.com/customer/address/edit/">Sửa địa chỉ</a>
+                                        </div>
+                                        <div class="box-content">
+                                            <address>Bạn chưa thiết lập địa chỉ thanh toán mặc định.</address>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="box">
+                                        <div class="box-title">
+                                            <h3>Địa chỉ thanh toán mặc định</h3>
+                                            <a href="https://vuabia.com/customer/address/edit/">Sửa địa chỉ</a>
+                                        </div>
+                                        <div class="box-content">
+                                            <address>Bạn chưa thiết lập địa chỉ vận chuyển mặc định.</address>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-left sidebar col-left-bottom"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

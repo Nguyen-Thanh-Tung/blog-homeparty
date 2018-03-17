@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Account</title>
+</head>
+<body>
+<div class="main-container col1-layout">
+    <div class="main">
+        <div class="col-main">
+            <div id="map-popup" class="map-popup" style="display:none;">
+                <a href="#" class="map-popup-close" id="map-popup-close">×</a>
+                <div class="map-popup-heading"><h3 id="map-popup-heading"></h3></div>
+                <div class="map-popup-content" id="map-popup-content">
+                    <div class="map-popup-msrp" id="map-popup-msrp-box">
+                        <span class="label">Giá:</span>
+                        <span style="text-decoration:line-through;" id="map-popup-msrp"></span>
+                    </div>
+                    <div class="map-popup-price" id="map-popup-price-box">
+                        <span class="label">Giá thực tế:</span>
+                        <span id="map-popup-price"></span>
+                    </div>
+                    <div class="map-popup-checkout">
+                        <form action="" method="POST" id="product_addtocart_form_from_popup">
+                            <input type="hidden" name="product" class="product_id" value="" id="map-popup-product-id">
+                            <div class="additional-addtocart-box">
+                            </div>
+                            <button type="button" title="Cho vào giỏ hàng" class="button btn-cart"
+                                    id="map-popup-button"><span><span>Cho vào giỏ hàng</span></span></button>
+                        </form>
+                    </div>
+                    <script type="text/javascript">
+                        //<![CDATA[
+                        document.observe("dom:loaded", Catalog.Map.bindProductForm);
+                        //]]>
+                    </script>
+                </div>
+                <div class="map-popup-text" id="map-popup-text">Our price is lower than the manufacturer's "minimum
+                    advertised price." As a result, we cannot show you the price in catalog or the product page.
+                    <br><br> You have no obligation to purchase the product once you know the price. You can simply
+                    remove the item from your cart.
+                </div>
+                <div class="map-popup-text" id="map-popup-text-what-this">Our price is lower than the manufacturer's
+                    "minimum advertised price." As a result, we cannot show you the price in catalog or the product
+                    page. <br><br> You have no obligation to purchase the product once you know the price. You can
+                    simply remove the item from your cart.
+                </div>
+            </div>
+            <div class="account-login">
+                <div class="page-title">
+                    <h1> Đăng nhập hoặc tạo tài khoản mới </h1>
+                </div>
+                <div class="form-content">
+                    <form action="https://vuabia.com/customer/account/loginPost/" method="post" id="login-form"
+                          class="scaffold-form">
+                        <input name="form_key" type="hidden" value="WvzgSoJdSM4YQ0FS">
+                        <div class="new-users">
+                            <h3>Chưa có tài khoản?</h3>
+                            <a title="Tạo tài khoản" class="button btn-grey main-button"
+                               href="https://vuabia.com/customer/account/create/"><span><span>Tạo tài khoản</span></span></a>
+                        </div>
+                        <div class="registered-users">
+                            <div class="content fieldset">
+                                <h3>Đã có tài khoản? Đăng nhập tại đây</h3>
+                                <ul class="form-list">
+                                    <li>
+                                        <label for="phone_custom" class="required"><em>*</em>Số điện thoại</label>
+                                        <div class="input-box">
+                                            <input type="tel" name="login[phone_custom]" id="phone_custom" value=""
+                                                   title="Số điện thoại"
+                                                   class="input-text required-entry validate-length maximum-length-11 minimum-length-9 validate-digits">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <label for="pass" class="required"><em>*</em>Mật khẩu</label>
+                                        <div class="input-box">
+                                            <input type="password" name="login[password]"
+                                                   class="input-text required-entry validate-password" id="pass"
+                                                   title="Mật khẩu">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="https://vuabia.com/customer/account/forgotpassword/"
+                                           class="f-left forgotpassword">Quên mật khẩu?</a>
+                                    </li>
+                                </ul>
+                                <div class="remember-me-popup">
+                                    <div class="remember-me-popup-head">
+                                        <h3>Đây là gì?</h3>
+                                        <a href="#" class="remember-me-popup-close" title="Đóng">Đóng</a>
+                                    </div>
+                                    <div class="remember-me-popup-body">
+                                        <p>Đánh dấu "Ghi nhớ tôi" sẽ cho phép bạn truy cập vào giỏ hàng trên máy tính
+                                            này khi bạn đăng xuất</p>
+                                        <div class="remember-me-popup-close-button a-right">
+                                            <a href="#" class="remember-me-popup-close button"
+                                               title="Đóng"><span>Đóng</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script type="text/javascript">
+                                    //<![CDATA[
+                                    function toggleRememberMePopup() {
+                                        var formParent = jQuery(this).parents('form:first');
+                                        formParent.find('.remember-me-box a').toggleClass('hide');
+                                        formParent.find('.remember-me-popup').toggleClass('show');
+                                        return false;
+                                    }
+
+                                    var rememberMeToggleSetup = false;
+                                    jQuery(document).ready(function () {
+                                        if (!rememberMeToggleSetup) {
+                                            jQuery('.remember-me-box a, .remember-me-popup a').on('click', toggleRememberMePopup);
+                                            rememberMeToggleSetup = true;
+                                        }
+                                    });
+                                    //]]>
+                                </script>
+                            </div>
+                            <button type="submit" class="button main-button" title="Đăng nhập" name="send" id="send2">
+                                <span><span>Đăng nhập</span></span></button>
+                        </div>
+                    </form>
+                </div>
+
+                <script type="text/javascript">
+                    //<![CDATA[
+                    var dataForm = new VarienForm('login-form', true);
+                    //]]>
+                </script>
+            </div>
+            <div class="divider-title"><span>Hoặc đăng nhập bằng</span></div>
+            <div class="inchoo-socialconnect-login inchoo-socialconnect-wrapper">
+                <div class="inchoo-socialconnect-button-wrapper inchoo-socialconnect-login-google">
+
+                    <a href="https://accounts.google.com/o/oauth2/auth?response_type=code&amp;redirect_uri=https%3A%2F%2Fvuabia.com%2Fsocialconnect%2Fgoogle%2Fconnect%2F&amp;client_id=602037006558-aq6i1b92c9a0pdh5l3lbasu3l8grvdek.apps.googleusercontent.com&amp;scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&amp;state=85ce7316e1094e6e1d15ffd80c538874&amp;access_type=offline&amp;approval_prompt=auto"
+                       class="connect-button connect-google">Google</a>
+
+                </div>
+                <div class="inchoo-socialconnect-button-wrapper inchoo-socialconnect-login-facebook">
+
+                    <a href="https://graph.facebook.com/oauth/authorize?client_id=535908903425849&amp;redirect_uri=https%3A%2F%2Fvuabia.com%2Fsocialconnect%2Ffacebook%2Fconnect%2F&amp;state=6f3f542635e6df862e53170ad0767bbc&amp;scope=email%2Cuser_birthday"
+                       class="connect-button connect-facebook">Facebook</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

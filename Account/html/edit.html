@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/control.css">
+    <script src="../js/edit.js"></script>
+
+</head>
+<body>
+<div class="main-container col2-left-layout">
+    <div class="main">
+        <div class="main-content">
+            <div class="col-left sidebar col-left-first">
+                <div class="block block-account">
+                    <div class="block-title">
+                        <strong>
+                            <a href="https://vuabia.com/customer/account/">
+                                <span>Tài khoản</span>
+                            </a>
+                        </strong>
+                    </div>
+                    <div class="block-content">
+                        <ul>
+                            <li class="current"><a href="https://vuabia.com/customer/account/edit/"><strong>Thông tin
+                                tài khoản</strong></a></li>
+                            <li><a href="https://vuabia.com/customer/address/">Danh bạ địa chỉ</a></li>
+                            <li><a href="https://vuabia.com/sales/order/history/">Đơn hàng của tôi</a></li>
+                            <li class="last"><a href="https://vuabia.com/wishlist/">Danh sách thích</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-main">
+                <div id="map-popup" class="map-popup" style="display:none;">
+                    <a href="#" class="map-popup-close" id="map-popup-close">×</a>
+                    <div class="map-popup-heading"><h3 id="map-popup-heading"></h3></div>
+                    <div class="map-popup-content" id="map-popup-content">
+                        <div class="map-popup-msrp" id="map-popup-msrp-box">
+                            <span class="label">Giá:</span>
+                            <span style="text-decoration:line-through;" id="map-popup-msrp"></span>
+                        </div>
+                        <div class="map-popup-price" id="map-popup-price-box">
+                            <span class="label">Giá thực tế:</span>
+                            <span id="map-popup-price"></span>
+                        </div>
+                        <div class="map-popup-checkout">
+                            <form action="" method="POST" id="product_addtocart_form_from_popup">
+                                <input type="hidden" name="product" class="product_id" value=""
+                                       id="map-popup-product-id">
+                                <div class="additional-addtocart-box">
+                                </div>
+                                <button type="button" title="Cho vào giỏ hàng" class="button btn-cart"
+                                        id="map-popup-button"><span><span>Cho vào giỏ hàng</span></span></button>
+                            </form>
+                        </div>
+                        <!--<script type="text/javascript">-->
+                            <!--//<![CDATA[-->
+                            <!--document.observe("dom:loaded", Catalog.Map.bindProductForm);-->
+                            <!--//]]>-->
+                        <!--</script>-->
+                    </div>
+                    <div class="map-popup-text" id="map-popup-text">Our price is lower than the manufacturer's "minimum
+                        advertised price." As a result, we cannot show you the price in catalog or the product page.
+                        <br><br> You have no obligation to purchase the product once you know the price. You can simply
+                        remove the item from your cart.
+                    </div>
+                    <div class="map-popup-text" id="map-popup-text-what-this">Our price is lower than the manufacturer's
+                        "minimum advertised price." As a result, we cannot show you the price in catalog or the product
+                        page. <br><br> You have no obligation to purchase the product once you know the price. You can
+                        simply remove the item from your cart.
+                    </div>
+                </div>
+                <div class="my-account">
+                    <div class="page-title">
+                        <h1>Sửa thông tin tài khoản</h1>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <form action="https://vuabia.com/customer/account/editPost/" method="post" autocomplete="off"
+                              id="form-validate" class="scaffold-form" enctype="multipart/form-data">
+                            <div class="fieldset">
+                                <input name="form_key" type="hidden" value="5kNx3K8KRR9Ton4G">
+                                <h2 class="legend">Thông tin tài khoản</h2>
+                                <!--p class="required">* Trường bắt buộc</p-->
+                                <ul class="form-list">
+                                    <li class="fields">
+                                        <div class="customer-name">
+                                            <div class="field name-firstname">
+                                                <label for="firstname" class="required"><em>*</em>Họ tên</label>
+                                                <div class="input-box">
+                                                    <input type="text" id="firstname" name="firstname" value="tung"
+                                                           title="Họ tên" maxlength="255"
+                                                           class="input-text required-entry">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="fields">
+                                        <div class="field">
+                                            <label for="email">Địa chỉ email</label>
+                                            <div class="input-box">
+                                                <input type="email" autocapitalize="off" autocorrect="off"
+                                                       spellcheck="false" name="email" id="email" value=""
+                                                       title="Địa chỉ email" class="input-text validate-email">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="fields">
+                                        <div class="field">
+                                            <label>Số điện thoại</label>
+                                            <div class="input-box">
+                                                <input value="01688893189" class="input-text" disabled="disabled">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="control">
+                                        <div class="pull-left ">
+                                            <input type="checkbox" name="change_password" id="change_password" value="1"
+                                                   title="Thay đổi mật khẩu"
+                                                   class="checkbox"><label for="change_password">Thay đổi mật
+                                            khẩu</label>
+                                        </div>
+                                        <div class="pull-right">
+                                            <button type="submit" title="Lưu" class="button">
+                                                <span><span>Lưu</span></span></button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="fieldset change-pass">
+                                <h2 class="legend">Thay đổi mật khẩu</h2>
+                                <ul class="form-list">
+                                    <li>
+                                        <label for="current_password" class="required"><em>*</em>Mật khẩu hiện
+                                            tại</label>
+                                        <div class="input-box">
+                                            <!-- This is a dummy hidden field to trick firefox from auto filling the password -->
+                                            <input type="text" class="input-text no-display" name="dummy" id="dummy">
+                                            <input type="password" title="Mật khẩu hiện tại" class="input-text"
+                                                   name="current_password" id="current_password">
+                                        </div>
+                                    </li>
+                                    <li class="fields">
+                                        <div class="field">
+                                            <label for="password" class="required"><em>*</em>Mật khẩu mới</label>
+                                            <div class="input-box">
+                                                <input type="password" title="Mật khẩu mới"
+                                                       class="input-text validate-password" name="password"
+                                                       id="password">
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <label for="confirmation" class="required"><em>*</em>Xác nhận mật khẩu
+                                                mới</label>
+                                            <div class="input-box">
+                                                <input type="password" title="Xác nhận mật khẩu mới"
+                                                       class="input-text validate-cpassword" name="confirmation"
+                                                       id="confirmation">
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--div class="buttons-set">
+                                <p class="back-link"><a href="https://vuabia.com/customer/account/"><small>&laquo; </small>Quay lại</a></p>
+                            </div-->
+                        </form>
+                    </div>
+                    <div class="clearfix "></div>
+                    <!--<script type="text/javascript">-->
+                        <!--//<![CDATA[-->
+                        <!--var dataForm = new VarienForm('form-validate', true);-->
+
+                        <!--function setPasswordForm(arg) {-->
+                            <!--if (arg) {-->
+                                <!--$('current_password').up(3).show();-->
+                                <!--$('current_password').addClassName('required-entry');-->
+                                <!--$('password').addClassName('required-entry');-->
+                                <!--$('confirmation').addClassName('required-entry');-->
+
+                            <!--} else {-->
+                                <!--$('current_password').up(3).hide();-->
+                                <!--$('current_password').removeClassName('required-entry');-->
+                                <!--$('password').removeClassName('required-entry');-->
+                                <!--$('confirmation').removeClassName('required-entry');-->
+                            <!--}-->
+                        <!--}-->
+
+                        <!--//]]>-->
+                    <!--</script>-->
+                </div>
+            </div>
+            <div class="col-left sidebar">
+                <div class="block block-reorder">
+                    <div class="block-title">
+                        <strong><span>Đơn hàng của tôi</span></strong>
+                    </div>
+                    <form method="post" action="https://vuabia.com/checkout/cart/addgroup/"
+                          id="reorder-validate-detail">
+                        <input name="form_key" type="hidden" value="5kNx3K8KRR9Ton4G">
+                        <div class="block-content">
+                            <p class="block-subtitle">Sản phẩm cuối được đặt hàng</p>
+                            <ol id="cart-sidebar-reorder">
+                                <li class="item last odd">
+                                    <input type="checkbox" name="order_items[]" id="reorder-item-12557" value="12557"
+                                           title="Chọn mua" class="checkbox validate-one-required-by-name">
+                                    <!--<script type="text/javascript">-->
+                                        <!--//<![CDATA[-->
+                                        <!--$('reorder-item-12557').advaiceContainer = 'cart-sidebar-reorder-advice-container';-->
+                                        <!--//]]>-->
+                                    <!--</script>-->
+                                    <p class="product-name"><a href="https://vuabia.com/beckice330-tang-ly.html">Beck's
+                                        Ice lon cao 330ml - Thùng 24 TẶNG LY chính hãng</a></p>
+                                </li>
+                            </ol>
+                            <!--<script type="text/javascript">decorateList('cart-sidebar-reorder')</script>-->
+                            <div id="cart-sidebar-reorder-advice-container"></div>
+                            <div class="actions">
+                                <button type="submit" title="Chọn mua" class="button btn-cart">
+                                    <span><span>Chọn mua</span></span></button>
+                                <a href="https://vuabia.com/customer/account/">Xem hết</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!--<script type="text/javascript">-->
+                    <!--//<![CDATA[-->
+                    <!--var reorderFormDetail = new VarienForm('reorder-validate-detail');-->
+                    <!--//]]>-->
+                <!--</script>-->
+            </div>
+        </div>
+    </div>
+</div><!---->
+</body>
+</html>
