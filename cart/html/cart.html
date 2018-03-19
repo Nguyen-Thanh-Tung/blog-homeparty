@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cart</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/home/manh/Documents/code/blog-homeparty/Account/js/account.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/cart.css">
+    <script src="../js/cart.js"></script>
+</head>
+<body>
+<div class="main-container col2-right-layout">
+    <div class="main">
+        <div class="col-main">
+            <div id="map-popup" class="map-popup" style="display:none;">
+                <a href="#" class="map-popup-close" id="map-popup-close">×</a>
+                <div class="map-popup-heading"><h3 id="map-popup-heading"></h3></div>
+                <div class="map-popup-content" id="map-popup-content">
+                    <div class="map-popup-msrp" id="map-popup-msrp-box">
+                        <span class="label">Giá:</span>
+                        <span style="text-decoration:line-through;" id="map-popup-msrp"></span>
+                    </div>
+                    <div class="map-popup-price" id="map-popup-price-box">
+                        <span class="label">Giá thực tế:</span>
+                        <span id="map-popup-price"></span>
+                    </div>
+                    <div class="map-popup-checkout">
+                        <form action="" method="POST" id="product_addtocart_form_from_popup">
+                            <input type="hidden" name="product" class="product_id" value="" id="map-popup-product-id">
+                            <div class="additional-addtocart-box">
+                            </div>
+                            <button type="button" title="Cho vào giỏ hàng" class="button btn-cart"
+                                    id="map-popup-button"><span><span>Cho vào giỏ hàng</span></span></button>
+                        </form>
+                    </div>
+                    <script type="text/javascript">
+                        //<![CDATA[
+                        document.observe("dom:loaded", Catalog.Map.bindProductForm);
+                        //]]>
+                    </script>
+                </div>
+                <div class="map-popup-text" id="map-popup-text">Our price is lower than the manufacturer's "minimum
+                    advertised price." As a result, we cannot show you the price in catalog or the product page.
+                    <br><br> You have no obligation to purchase the product once you know the price. You can simply
+                    remove the item from your cart.
+                </div>
+                <div class="map-popup-text" id="map-popup-text-what-this">Our price is lower than the manufacturer's
+                    "minimum advertised price." As a result, we cannot show you the price in catalog or the product
+                    page. <br><br> You have no obligation to purchase the product once you know the price. You can
+                    simply remove the item from your cart.
+                </div>
+            </div>
+            <button type="button" title="Tiếp tục mua sắm" class="button2 btn-continue"
+                    onclick="setLocation('https://vuabia.com/')">
+                <span><span style="font-size: 24px;margin-right: 5px;">«</span><span>Tiếp tục mua sắm</span></span>
+            </button>
+            <div class="page-cart">
+                <div class="cart display-single-price" id="cart-content">
+
+                    <div class="page-title title-buttons">
+                        <h1>Giỏ hàng</h1>
+                    </div>
+                    <form action="https://vuabia.com/checkout/cart/updatePost/" method="post">
+                        <input name="form_key" type="hidden" value="rsbM1tgHnwjIjK1J">
+                        <table id="shopping-cart-table" class="cart-table data-table">
+                            <colgroup>
+                                <col width="1">
+                                <col width="1">
+                                <col width="1">
+                                <col width="1">
+                                <col width="1">
+                                <col width="1">
+
+                            </colgroup>
+                            <thead>
+                            <tr class="first last">
+                                <th rowspan="1"><span class="nobr">Sản phẩm</span>
+                                </th>
+
+                                <th rowspan="1"></th>
+
+                                <th class="a-right cart-price-head" colspan="1">
+                                    <!--                            <div class="cart-price-placeholder">-->
+                                    <span class="nobr">Giá</span>
+                                    <!--                            </div>-->
+                                </th>
+
+                                <th rowspan="1" class="a-center">
+                                    Số lượng
+
+                                </th>
+
+                                <th class="a-right cart-total-head" colspan="1">
+                                    <!--                            <div class="cart-total-placeholder">-->
+                                    Tổng số tiền                    <!--                            </div>-->
+                                </th>
+                            </tr>
+                            </thead>
+                            <tfoot>
+
+                            </tfoot>
+                            <tbody>
+                            <tr class="first odd">
+                                <td class="product-cart-image">
+                                    <a href="https://vuabia.com/budweiser-lon-330ml-thung-24-t-ng-2-ly-budweiser-phien-b-n-t-t.html"
+                                       title="BUDWEISER LON 330ML - THÙNG 24 TẶNG 2 LY BUDWEISER (phiên bản Tết)"
+                                       class="product-image">
+                                        <img src="https://vuabia.com/media/catalog/product/cache/5/thumbnail/80x/9df78eab33525d08d6e5fb8d27136e95/b/u/budtet_ly.jpg"
+                                             alt="BUDWEISER LON 330ML - THÙNG 24 TẶNG 2 LY BUDWEISER (phiên bản Tết)">
+                                    </a>
+
+                                    <ul class="cart-links">
+                                        <li>
+                                            <a href="https://vuabia.com/checkout/cart/configure/id/43758/"
+                                               title="Sửa thông số sản phẩm">Sửa</a>
+                                        </li>
+
+                                    </ul>
+                                </td>
+
+                                <td class="product-cart-info">
+                                    <h2 class="product-name">
+                                        <a href="https://vuabia.com/budweiser-lon-330ml-thung-24-t-ng-2-ly-budweiser-phien-b-n-t-t.html">BUDWEISER
+                                            LON 330ML - THÙNG 24 TẶNG 2 LY BUDWEISER (phiên bản Tết)</a>
+                                    </h2>
+                                    <p class="stock">Còn hàng</p>
+                                    <a href="https://vuabia.com/wishlist/index/add/product/1021/form_key/rsbM1tgHnwjIjK1J/"
+                                       class="wishlist"><i class="fa fa-heart"></i>Thêm vào danh sách yêu thích</a>
+
+
+                                </td>
+
+
+                                <td class="product-cart-price" data-rwd-label="Giá"
+                                    data-rwd-tax-label="Không bao gồm thuế">
+
+                            <span class="cart-price">
+                                                <span class="price">
+                    405.000Đ                     </span>
+
+            </span>
+
+                                </td>
+                                <!-- inclusive price starts here -->
+                                <td class="product-cart-actions" data-rwd-label="Số lượng">
+                                    <a href="#" class="click qty-down-fixed-onclick"><i class="fa fa-minus"></i></a>
+                                    <input type="text" pattern="\d*" name="cart[43758][qty]" value="1" size="4"
+                                           data-cart-item-id="bud_tet_tang_2_ly" title="Số lượng" class="input-text qty"
+                                           maxlength="12">
+                                    <a href="#" class="click qty-up-fixed-onclick"><i class="fa fa-plus"></i></a>
+                                    <button type="submit" name="update_cart_action" value="update_qty" title="Cập nhật"
+                                            class="button btn-update btn-update-overload">
+                                        <span><span><i class="fa fa-floppy-o"></i></span></span>
+                                    </button>
+                                    <a href="https://vuabia.com/checkout/cart/delete/id/43758/form_key/rsbM1tgHnwjIjK1J/uenc/aHR0cHM6Ly92dWFiaWEuY29tL2NoZWNrb3V0L2NhcnQv/"
+                                       title="Bỏ sản phẩm" class="remove-item">
+                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                    </a>
+                                </td>
+
+                                <!--Sub total starts here -->
+                                <td class="product-cart-total last" data-rwd-label="Tổng số tiền">
+                    <span class="cart-price">
+
+                                                <span class="price">
+                    405.000Đ                     </span>
+
+        </span>
+                                </td>
+                            </tr>
+                            <tr class="last even">
+                                <td class="product-cart-image">
+                                    <a href="https://vuabia.com/beckice330-tang-ly.html"
+                                       title="Beck's Ice lon cao 330ml - Thùng 24 TẶNG LY chính hãng"
+                                       class="product-image">
+                                        <img src="https://vuabia.com/media/catalog/product/cache/5/thumbnail/80x/9df78eab33525d08d6e5fb8d27136e95/b/e/becks_ice_tang_ly.jpg"
+                                             alt="Beck's Ice lon cao 330ml - Thùng 24 TẶNG LY chính hãng">
+                                    </a>
+
+                                    <ul class="cart-links">
+                                        <li>
+                                            <a href="https://vuabia.com/checkout/cart/configure/id/43759/"
+                                               title="Sửa thông số sản phẩm">Sửa</a>
+                                        </li>
+
+                                    </ul>
+                                </td>
+
+                                <td class="product-cart-info">
+                                    <h2 class="product-name">
+                                        <a href="https://vuabia.com/beckice330-tang-ly.html">Beck's Ice lon cao 330ml -
+                                            Thùng 24 TẶNG LY chính hãng</a>
+                                    </h2>
+                                    <p class="stock">Còn hàng</p>
+                                    <a href="https://vuabia.com/wishlist/index/add/product/1034/form_key/rsbM1tgHnwjIjK1J/"
+                                       class="wishlist"><i class="fa fa-heart"></i>Thêm vào danh sách yêu thích</a>
+
+
+                                </td>
+
+
+                                <td class="product-cart-price" data-rwd-label="Giá"
+                                    data-rwd-tax-label="Không bao gồm thuế">
+
+                            <span class="cart-price">
+                                                <span class="price">
+                    295.000Đ                     </span>
+
+            </span>
+
+                                </td>
+                                <!-- inclusive price starts here -->
+                                <td class="product-cart-actions" data-rwd-label="Số lượng">
+                                    <a href="#" class="click qty-down-fixed-onclick"><i class="fa fa-minus"></i></a>
+                                    <input type="text" pattern="\d*" name="cart[43759][qty]" value="1" size="4"
+                                           data-cart-item-id="beckice330_tang_ly" title="Số lượng"
+                                           class="input-text qty" maxlength="12">
+                                    <a href="#" class="click qty-up-fixed-onclick"><i class="fa fa-plus"></i></a>
+                                    <button type="submit" name="update_cart_action" value="update_qty" title="Cập nhật"
+                                            class="button btn-update btn-update-overload">
+                                        <span><span><i class="fa fa-floppy-o"></i></span></span>
+                                    </button>
+                                    <a href="https://vuabia.com/checkout/cart/delete/id/43759/form_key/rsbM1tgHnwjIjK1J/uenc/aHR0cHM6Ly92dWFiaWEuY29tL2NoZWNrb3V0L2NhcnQv/"
+                                       title="Bỏ sản phẩm" class="remove-item">
+                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                    </a>
+                                </td>
+
+                                <!--Sub total starts here -->
+                                <td class="product-cart-total last" data-rwd-label="Tổng số tiền">
+                    <span class="cart-price">
+
+                                                <span class="price">
+                    295.000Đ                     </span>
+
+        </span>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <script type="text/javascript">decorateTable('shopping-cart-table')</script>
+                    </form>
+                </div>
+                <div class="cart-order-summary col-right sidebar">
+                    <div class="cart-summary order-summary-cart-page">
+                        <h5 class="summary-header mbl">
+                            Thông tin đơn hàng
+                        </h5>
+                        <div class="summary-main table mtm">
+                            <div class="summary-subtotal row">
+                                <span class="col">Tạm tính:</span>
+                                <span class="col txt-right">700.000Đ</span>
+                            </div>
+                        </div>
+                        <div class="cart-totals-wrapper">
+                            <div class="cart-totals">
+                                <table id="shopping-cart-totals-table">
+                                    <colgroup>
+                                        <col>
+                                        <col width="1">
+                                    </colgroup>
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="1" class="a-right">
+                                            Thành tiền:
+                                        </td>
+                                        <td class="a-right">
+                    <span class="price">
+                        700.000Đ                    </span>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <ul class="checkout-types bottom">
+                                    <li class="method-checkout-cart-methods-onepage-bottom">
+                                        <button type="button" title="Tiến hành thanh toán"
+                                                class="button btn-proceed-checkout btn-checkout"
+                                                onclick="window.location='https://vuabia.com/checkout/onepage/';"><span><span>Tiến hành thanh toán</span></span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--[if lt IE 8]>
+                        <input type="hidden" id="update_cart_action_container" data-cart-item-update/>
+                        <![endif]-->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-right sidebar"></div>
+    </div>
+</div>
+</body>
+</html>
